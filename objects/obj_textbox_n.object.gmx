@@ -243,6 +243,9 @@ if (message_end &gt; 0)
         while (i &lt;= string_length(message[message_current]) &amp;&amp; i &lt; cutoff)
         {
         
+        draw_set_color(col[0]);
+        anim = 0;
+        
         if string_copy(message[message_current], i, 1) == "#"
                 {
                    space = 0;
