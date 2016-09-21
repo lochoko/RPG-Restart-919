@@ -145,6 +145,7 @@ if string_char_at(message[message_current], 1) == "["
         {
             draw_set_alpha(.9);
             draw_rectangle_colour(tx1, ty1, 300, ty1-60, c_gray, c_gray, c_gray, c_gray, 0);
+            draw_rectangle_colour(tx1, ty1, 300, ty1-60, c_black, c_black, c_black, c_black, 1);
             draw_set_alpha(1);
             draw_set_color(c_white);
             draw_text(tx1 + 12, ty1-45, name);
