@@ -1,0 +1,18 @@
+[N:(Name)] -- Changes the character name.
+
+
+[IN:(Slot [1-4]):(Sprite ID):(Image Index)] -- Slot 1-4 for Cut in, Sprite ID, configured in scr_cut_in_sprite, Image Index (sub image to load from sprite sheet)
+[IA:(Slot [1-4)]
+[IX:(Slot [1-4])
+[IM:(From Slot):(To Slot)]
+
+
+|S1 -- Slow text (.25)
+|S2 -- Medium text (.5)
+|S3 -- Fast text (.75)
+
+|C(0 - 9) -- Change Color
+
+|TS -- Shake Text
+
+|AP -- Auto Proceed
