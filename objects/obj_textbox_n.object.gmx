@@ -79,16 +79,19 @@ cindex[4] = 0;
 cactive = 1;
 
 
-//Speed Manip
+// Speed Manip
 
 spdm[0] = .25
 spdm[1] = .5
 spdm[2] = .75
 spdm[3] = 1
 
+  // Default Speed
+  spddef = spdm[2];
+
 // Custom colors
 
-col[0] = c_white; // Default color
+col[0] = c_white; 
 col[1] = c_red;
 col[2] = c_blue;
 col[3] = c_aqua;
@@ -99,6 +102,8 @@ col[7] = c_purple;
 col[8] = c_green;
 col[9] = c_silver;
 
+  // Default color
+  coldef = col[0];
 
 </string>
           </argument>
@@ -125,7 +130,8 @@ col[9] = c_silver;
             <string>/// Draw Boxes and Text Sprites
 
 draw_set_font(tfnt);
-draw_set_color(col[0]);
+draw_set_color(coldef);
+tspd = spddef;
 
 message_end = array_length_1d(message) - 1;
 
@@ -244,8 +250,9 @@ if (message_end &gt; 0)
         while (i &lt;= string_length(message[message_current]) &amp;&amp; i &lt; cutoff)
         {
         
-        draw_set_color(col[0]);
+        draw_set_color(coldef);
         anim = 0;
+        tspd = spddef;
         
         if string_copy(message[message_current], i, 1) == "#"
                 {
