@@ -1,0 +1,28 @@
+grid_size = 32; //Customizable, but unnecessary
+
+rwidth = room_width/grid_size;
+rheight = room_height/grid_size;
+
+room_grid = ds_grid_create(rwidth, rheight);
+
+var rx, ry;
+
+for (rx = 1; rx < rwidth; rx++)
+{
+	for (ry = 1; ry < rheight; ry++;)
+	{
+		if position_meeting((rx*grid_size), (ry*grid_size), obj_DNP)
+		{
+			ds_grid_set(room_grid, rx, ry, 1);		
+		} else {
+			ds_grid_set(room_grid, rx, ry, 0);
+		}
+	}
+}
+
+
+
+/// Object Creation
+
+objx = x/room.grid_size;
+objy = y/room.grid_size;
